@@ -11,13 +11,13 @@
 }
 
 html {
-  font-family: "Roboto", -apple-system, BlinkMacSystemFont, "Segoe UI",
-    Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+  font-family: 'Roboto', -apple-system, BlinkMacSystemFont, 'Segoe UI',
+    Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
     sans-serif;
 }
 
-html[lang="ja"] {
-  font-family: "Noto Sans JP", -apple-system, BlinkMacSystemFont, sans-serif;
+html[lang='ja'] {
+  font-family: 'Noto Sans JP', -apple-system, BlinkMacSystemFont, sans-serif;
 }
 
 html,
