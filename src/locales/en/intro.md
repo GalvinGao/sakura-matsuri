@@ -14,6 +14,6 @@ Thank you very much!
 
 We hope you will join us in the Lancaster premier of the Sakura Festival and have a pleasant time. We look forward to meeting you on the afternoon on Saturday, March 25.
 
-Ken-ichi Miura
-Director of the Japanese Program
+Ken-ichi Miura<br>
+Director of the Japanese Program<br>
 Department of German, Russian & East Asian Languages
