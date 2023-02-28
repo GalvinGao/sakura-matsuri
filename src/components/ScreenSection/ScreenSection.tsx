@@ -1,8 +1,24 @@
-export function ScreenSection() {
+import clsx from 'clsx'
+export function ScreenSection({
+  children,
+  id,
+  className,
+  contentClassName,
+  ...props
+}: React.PropsWithChildren<React.HTMLAttributes<HTMLDivElement>> & {
+  contentClassName?: string
+}) {
   return (
-    <section className="flex h-full min-h-full w-full snap-start items-center justify-center">
-      <div className="flex h-full w-full -m-1 border border-solid border-red-500 p-4">
-        :D
+    <section
+      id={'section-' + (id ?? Math.random().toString(36).substr(2, 9))}
+      className={clsx(
+        'min-h-full w-full snap-start px-4 pt-4 pb-[4rem]',
+        className,
+      )}
+      {...props}
+    >
+      <div className={clsx('min-h-full h-auto w-full', contentClassName)}>
+        {children}
       </div>
     </section>
   )

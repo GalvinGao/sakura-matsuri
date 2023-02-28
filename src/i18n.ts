@@ -52,9 +52,16 @@ i18n
   .use(LanguageDetector)
   .init({
     // the translations
-    // (tip move them in a JSON file and import them,
-    // or even better, manage them via a UI: https://react.i18next.com/guides/multiple-translation-files#manage-your-translations-with-a-management-gui)
-    resources,
+    // map resources (in form of {lang: {resource: content}}) to {lang: {translation: {resource: content}}}
+    resources: Object.entries(resources).reduce(
+      (acc, [lang, resources]) => ({
+        ...acc,
+        [lang]: {
+          translation: resources,
+        },
+      }),
+      {} as Record<string, any>,
+    ),
     lng: 'en', // if you're using a language detector, do not define the lng option
     fallbackLng: 'en',
 

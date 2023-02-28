@@ -17,8 +17,8 @@ export const SECTIONS = [
 export function Header() {
   const { t } = useTranslation()
   return (
-    <header className="flex flex-col items-start justify-center bg-pink-50 shadow w-full">
-      <div className="h-12 md:h-14 flex items-center w-full px-4 py-1">
+    <header className="relative flex flex-col items-start justify-center bg-pink-50 shadow w-full z-1">
+      <div className="h-12 flex items-center w-full px-4 py-1">
         <div className="inline-flex items-center justify-between font-bold">
           {t('title')}
         </div>
@@ -32,8 +32,8 @@ export function Header() {
 export function NavigationBar() {
   const { t } = useTranslation()
   return (
-    <div className="absolute bottom-0 bg-pink-50 py-2 shadow w-full">
-      <div className="px-4 h-8 md:h-9 flex items-center justify-start gap-1 overflow-x-auto w-full">
+    <div className="fixed bottom-0 bg-pink-50 shadow w-full">
+      <div className="px-4 py-2 h-12 md:h-9 flex items-center justify-start gap-1 overflow-x-auto w-full">
         {SECTIONS.map((el, i) => (
           <ButtonBase
             key={i}
