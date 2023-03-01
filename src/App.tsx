@@ -5,7 +5,6 @@ import { Header, NavigationBar } from './components/Header/Header'
 import { SectionHero } from './components/sections/SectionHero'
 import { SectionIntro } from './components/sections/SectionIntro'
 import { SectionMap } from './components/sections/SectionMap'
-import { SectionSchedule } from './components/sections/SectionSchedule'
 
 function App() {
   const imageRef = useRef<HTMLImageElement>(null)
@@ -21,16 +20,16 @@ function App() {
         1.1,
       )
 
-      if (scrollPercentage > 1) {
-        return
-      }
+      // if (scrollPercentage > 1) {
+      //   return
+      // }
 
       const image = imageRef.current
       if (!image) return
 
       window.requestAnimationFrame(() => {
         image.style.filter = `brightness(${1 - scrollPercentage * 0.8})`
-        image.style.transform = `scale(${1 + scrollPercentage * 0.2})`
+        image.style.transform = `scale(${1.1 + scrollPercentage * 0.2})`
       })
     }
 
@@ -49,18 +48,18 @@ function App() {
         ref={imageRef}
         src={sakuraBackground}
         alt="Sakura"
-        className="absolute inset-0 w-full h-full object-cover -z-1"
+        className="fixed inset-0 w-full h-full object-cover -z-1"
       />
 
       <Header />
       <section
-        className="relative h-[calc(100%-3rem)] w-full snap-y snap-proximity snap-always overflow-auto text-primary z-1"
+        className="relative h-[calc(100%-6rem)] w-full snap-y snap-proximity snap-always overflow-auto text-primary z-1 mt-[3rem]"
         ref={scrollContainerRef}
       >
         <SectionHero />
         <SectionIntro />
         <SectionMap />
-        <SectionSchedule />
+        {/* <SectionSchedule /> */}
       </section>
       <NavigationBar />
     </main>

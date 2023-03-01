@@ -7,18 +7,18 @@ import { LanguageSettings } from '../LanguageSettings'
 export const SECTIONS = [
   { title: 'intro' },
   { title: 'map' },
-  { title: 'schedule' },
-  { title: 'president-message' },
-  { title: 'admission-free' },
-  { title: 'sponsors' },
-  { title: 'contact' },
-  { title: 'faq' },
+  // { title: 'schedule' },
+  // { title: 'president-message' },
+  // { title: 'admission-free' },
+  // { title: 'sponsors' },
+  // { title: 'contact' },
+  // { title: 'faq' },
 ]
 
 export function Header() {
   const { t } = useTranslation()
   return (
-    <header className="relative flex flex-col items-start justify-center bg-pink-50 shadow w-full z-1">
+    <header className="fixed top-0 flex flex-col items-start justify-center bg-pink-50 shadow w-full z-10">
       <div className="h-12 flex items-center w-full px-4 py-1">
         <div className="inline-flex items-center justify-between font-bold">
           {t('title')}
@@ -44,7 +44,7 @@ export function NavigationBar() {
           setActiveSection(intersectingId.replace('section-', ''))
         }
       },
-      { threshold: 0.1 },
+      { threshold: 0.2 },
     )
 
     SECTIONS.forEach(el => {
@@ -71,8 +71,8 @@ export function NavigationBar() {
   }, [activeSection])
 
   return (
-    <div className="fixed bottom-0 bg-pink-50 shadow w-full">
-      <div className="px-4 py-2 h-12 md:h-9 flex items-center justify-start gap-1 overflow-x-auto w-full">
+    <div className="fixed bottom-0 bg-pink-50 shadow w-full pb-[env(safe-area-inset-bottom)]">
+      <div className="px-4 py-2 h-12 flex items-center justify-start gap-1 overflow-x-auto w-full">
         {SECTIONS.map((el, i) => (
           <ButtonBase
             key={el.title}

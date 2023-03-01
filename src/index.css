@@ -17,7 +17,9 @@ html {
 }
 
 html[lang='ja'] {
-  font-family: 'Noto Sans JP', -apple-system, BlinkMacSystemFont, sans-serif;
+  /* font-family: 'Noto Sans JP', -apple-system, BlinkMacSystemFont, sans-serif; */
+  /* adjust font baseline by -0.05em */
+  vertical-align: -0.05rem;
 }
 
 html,

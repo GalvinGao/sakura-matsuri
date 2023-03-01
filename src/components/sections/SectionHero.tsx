@@ -11,12 +11,12 @@ export function SectionHero() {
     <ScreenSection
       id="hero"
       className="h-full"
-      contentClassName="flex flex-col items-center justify-end h-full"
+      contentClassName="flex flex-col items-center justify-end h-full drop-shadow-md"
     >
-      <img src={logo} alt="Sakura" className="w-48 h-48 drop-shadow-md" />
+      <img src={logo} alt="Sakura" className="w-48 h-48" />
       <h1 className="text-xs uppercase tracking-wider">Lancaster, PA</h1>
-      <h1 className="text-2xl font-bold mb-4 drop-shadow-md">{t('title')}</h1>
-      <Icon icon={mdiChevronDown} className="text-4xl animate-bounce mb-8" />
+      <h1 className="text-2xl font-bold mb-4">{t('title')}</h1>
+      <Icon icon={mdiChevronDown} className="text-4xl animate-bounce" />
     </ScreenSection>
   )
 }
