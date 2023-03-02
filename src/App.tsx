@@ -48,12 +48,12 @@ function App() {
         ref={imageRef}
         src={sakuraBackground}
         alt="Sakura"
-        className="fixed inset-0 w-full h-full object-cover -z-1"
+        className="fixed inset-0 w-full h-full object-cover -z-1 scale-110"
       />
 
       <Header />
       <section
-        className="relative h-[calc(100%-6rem)] w-full snap-y snap-proximity snap-always overflow-auto text-primary z-1 mt-[3rem]"
+        className="relative h-[calc(100%-6rem)] max-w-xl mx-auto w-full snap-y snap-proximity snap-always overflow-auto text-primary z-1 mt-[3rem]"
         ref={scrollContainerRef}
       >
         <SectionHero />
