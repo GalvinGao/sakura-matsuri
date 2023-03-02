@@ -8,6 +8,8 @@ This is a static website for Sakura (Cherry Blossom) Festival 2023, hosted by th
 
 The page is hosted by [Cloudflare Pages](https://pages.cloudflare.com/), with CI (automatic deployment) powered by [GitHub Actions](https://github.com/features/actions).
 
+Production website is available at [https://sakura2023.fandm.edu](https://sakura2023.fandm.edu). The domain might become unavailable after the event due to school policies.
+
 ## Development
 
 ```bash
