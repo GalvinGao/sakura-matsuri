@@ -6,7 +6,7 @@
 
 This is a static website for Sakura (Cherry Blossom) Festival 2023, hosted by the Japanese Program at Franklin & Marshall College (F&M) on March 25, 2023.
 
-The page is hosted by [Cloudfare Pages](https://pages.cloudflare.com/), with CI (automatic deployment) powered by [GitHub Actions](https://github.com/features/actions).
+The page is hosted by [Cloudflare Pages](https://pages.cloudflare.com/), with CI (automatic deployment) powered by [GitHub Actions](https://github.com/features/actions).
 
 ## Development
 
