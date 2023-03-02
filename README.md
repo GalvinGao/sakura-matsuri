@@ -39,4 +39,4 @@ npm run build
 - [Tailwind CSS](https://tailwindcss.com/)
 - [Vite](https://vitejs.dev/)
 - [GitHub Actions](https://github.com/features/actions)
-- [Cloudfare Pages](https://pages.cloudflare.com/)
+- [Cloudflare Pages](https://pages.cloudflare.com/)
