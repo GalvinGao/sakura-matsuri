@@ -63,13 +63,13 @@ export function NavigationBar() {
     }
   }, [])
 
-  useEffect(() => {
-    // scroll that nav button into view
-    document.getElementById('nav-' + activeSection)?.scrollIntoView({
-      behavior: 'smooth',
-      block: 'center',
-    })
-  }, [activeSection])
+  // useEffect(() => {
+  //   // scroll that nav button into view
+  //   document.getElementById('nav-' + activeSection)?.scrollIntoView({
+  //     behavior: 'smooth',
+  //     block: 'center',
+  //   })
+  // }, [activeSection])
 
   return (
     <div className="fixed bottom-0 bg-pink-50 shadow w-full pb-[env(safe-area-inset-bottom)]">

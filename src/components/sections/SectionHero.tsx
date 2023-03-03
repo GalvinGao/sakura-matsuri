@@ -18,7 +18,7 @@ export function SectionHero() {
       <h1 className="text-2xl font-bold mb-4">{t('title')}</h1>
       <Icon
         icon={mdiChevronDown}
-        className="text-4xl animate-bounce"
+        className="text-4xl animate-bounce cursor-pointer"
         onClick={() => {
           document.getElementById('section-intro')?.scrollIntoView({
             behavior: 'smooth',
