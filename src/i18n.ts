@@ -22,7 +22,6 @@ const resources = Object.entries(
     return acc
   }
   const [, lang, resource, ext] = match
-  console.log('lang', lang, 'resource', resource, 'ext', ext)
   const moduleContent = module as { default: unknown }
   if (ext === 'json') {
     const content = moduleContent.default as Record<string, string>
@@ -62,10 +61,16 @@ i18n
       }),
       {} as Record<string, any>,
     ),
-    lng: 'en', // if you're using a language detector, do not define the lng option
+    // lng: 'en', // if you're using a language detector, do not define the lng option
     fallbackLng: 'en',
 
     interpolation: {
       escapeValue: false, // react already safes from xss => https://www.i18next.com/translation-function/interpolation#unescape
+    },
+
+    // LanguageDetector options
+    detection: {
+      order: ['cookie', 'localStorage', 'navigator'],
+      caches: ['localStorage', 'cookie'],
     },
   })

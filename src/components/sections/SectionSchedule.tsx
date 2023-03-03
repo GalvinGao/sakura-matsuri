@@ -155,10 +155,9 @@ function ScheduleRender({ events }: { events: ScheduleEvent[] }) {
           (event.end.getTime() - event.start.getTime()) / 1000 / 60 / 60
         const heightOffsetPixels = heightOffsetHours * blockHeight
 
-        console.log(event.start.getHours() * 24 + event.start.getMinutes())
-
         return (
           <div
+            key={event.start.getTime()}
             className="absolute left-[6rem] w-[calc(100%-6rem)] h-full"
             style={{
               top: topOffsetPixels + 1,
