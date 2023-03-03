@@ -1,11 +1,11 @@
 {
   "title": "桜祭り 2023",
   "sections": {
+    "overview": "概要",
     "intro": "紹介",
     "map": "地図",
     "schedule": "スケジュール",
     "president-message": "学長からのメッセージ",
-    "admission-free": "入場無料",
     "sponsors": "協賛",
     "contact": "連絡先",
     "faq": "FAQ"

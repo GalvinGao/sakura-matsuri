@@ -11,7 +11,7 @@ export function SectionMap() {
           src="https://maps.google.com/maps?ll=40.047272,-76.32049&z=16&t=m&hl=en&gl=US&output=embed&cid=4011440776197207656"
           width="100%"
           height="500"
-          style={{ border: 0 }}
+          style={{ border: 0, height: '75vh' }}
           allowFullScreen
           loading="lazy"
           referrerPolicy="no-referrer"

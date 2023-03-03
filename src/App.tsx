@@ -5,6 +5,7 @@ import { Header, NavigationBar } from './components/Header/Header'
 import { SectionHero } from './components/sections/SectionHero'
 import { SectionIntro } from './components/sections/SectionIntro'
 import { SectionMap } from './components/sections/SectionMap'
+import { SectionOverview } from './components/sections/SectionOverview'
 import { SectionSchedule } from './components/sections/SectionSchedule'
 
 function App() {
@@ -58,6 +59,7 @@ function App() {
         ref={scrollContainerRef}
       >
         <SectionHero />
+        <SectionOverview />
         <SectionIntro />
         <SectionMap />
         <SectionSchedule />

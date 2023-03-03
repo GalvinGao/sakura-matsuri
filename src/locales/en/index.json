@@ -1,11 +1,11 @@
 {
   "title": "Sakura Festival 2023",
   "sections": {
+    "overview": "Overview",
     "intro": "Introduction",
     "map": "Map",
     "schedule": "Schedule",
     "president-message": "President Message",
-    "admission-free": "Admission Free",
     "sponsors": "Sponsors",
     "contact": "Contact",
     "faq": "FAQ"

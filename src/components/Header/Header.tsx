@@ -9,11 +9,11 @@ import { useTranslation } from 'react-i18next'
 import { LanguageSettings } from '../LanguageSettings'
 
 export const SECTIONS = [
+  { title: 'overview', icon: mdiHome },
   { title: 'intro', icon: mdiHome },
   { title: 'map', icon: mdiMap },
   { title: 'schedule', icon: mdiCalendar },
   // { title: 'president-message' },
-  // { title: 'admission-free' },
   // { title: 'sponsors' },
   // { title: 'contact' },
   // { title: 'faq' },
