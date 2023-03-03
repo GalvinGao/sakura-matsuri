@@ -1,4 +1,5 @@
 import clsx from 'clsx'
+
 export function ScreenSection({
   children,
   id,
@@ -12,7 +13,7 @@ export function ScreenSection({
     <section
       id={'section-' + (id ?? Math.random().toString(36).substr(2, 9))}
       className={clsx(
-        'min-h-full w-full snap-start px-6 pt-[2rem] pb-[4rem]',
+        'min-h-full w-full snap-start px-4 pt-[2rem] pb-[4rem] max-w-xl mx-auto',
         className,
       )}
       {...props}

@@ -1,3 +1,6 @@
+import mdiHome from '@iconify/icons-mdi/home'
+import mdiMap from '@iconify/icons-mdi/map'
+import { Icon } from '@iconify/react'
 import { ButtonBase } from '@mui/material'
 import clsx from 'clsx'
 import { useEffect, useState } from 'react'
@@ -5,8 +8,8 @@ import { useTranslation } from 'react-i18next'
 import { LanguageSettings } from '../LanguageSettings'
 
 export const SECTIONS = [
-  { title: 'intro' },
-  { title: 'map' },
+  { title: 'intro', icon: mdiHome },
+  { title: 'map', icon: mdiMap },
   // { title: 'schedule' },
   // { title: 'president-message' },
   // { title: 'admission-free' },
@@ -79,7 +82,9 @@ export function NavigationBar() {
             id={'nav-' + el.title}
             className={clsx(
               'flex items-center text-center w-full rounded-full px-3 h-full snap-x snap-mandatory whitespace-nowrap transition',
-              activeSection === el.title && 'bg-pink-200',
+              activeSection === el.title
+                ? 'bg-pink-200 text-pink-900'
+                : 'text-pink-700',
             )}
             onClick={() => {
               const element = document.getElementById('section-' + el.title)
@@ -91,7 +96,8 @@ export function NavigationBar() {
               }
             }}
           >
-            {t('sections.' + el.title)}
+            {el.icon && <Icon icon={el.icon} className="mr-1 opacity-80" />}
+            <span>{t('sections.' + el.title)}</span>
           </ButtonBase>
         ))}
       </div>

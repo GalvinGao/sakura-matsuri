@@ -53,7 +53,7 @@ function App() {
 
       <Header />
       <section
-        className="relative h-[calc(100%-6rem)] max-w-xl mx-auto w-full snap-y snap-proximity snap-always overflow-auto text-primary z-1 mt-[3rem]"
+        className="relative h-[calc(100%-6rem)] w-full snap-y snap-proximity snap-always overflow-auto text-primary z-1 mt-[3rem]"
         ref={scrollContainerRef}
       >
         <SectionHero />
