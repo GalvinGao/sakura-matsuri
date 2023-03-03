@@ -5,6 +5,7 @@ import { Header, NavigationBar } from './components/Header/Header'
 import { SectionHero } from './components/sections/SectionHero'
 import { SectionIntro } from './components/sections/SectionIntro'
 import { SectionMap } from './components/sections/SectionMap'
+import { SectionSchedule } from './components/sections/SectionSchedule'
 
 function App() {
   const imageRef = useRef<HTMLImageElement>(null)
@@ -59,7 +60,7 @@ function App() {
         <SectionHero />
         <SectionIntro />
         <SectionMap />
-        {/* <SectionSchedule /> */}
+        <SectionSchedule />
       </section>
       <NavigationBar />
     </main>

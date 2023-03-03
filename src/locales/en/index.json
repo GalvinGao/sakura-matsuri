@@ -9,5 +9,23 @@
     "sponsors": "Sponsors",
     "contact": "Contact",
     "faq": "FAQ"
+  },
+  "features": {
+    "items": [
+      "Cotton Candy",
+      "Choco-banana",
+      "Kendama",
+      "Water yoyos",
+      "Tea",
+      "Portrait drawing",
+      "Origami",
+      "Shooting",
+      "T-shirt/Indigo sales",
+      "Your name in Japanese",
+      "Kimono wearing ",
+      "Chopsticks game",
+      "LAAPI Information"
+    ],
+    "and-more": "and more!"
   }
 }

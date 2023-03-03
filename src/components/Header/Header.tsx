@@ -1,3 +1,4 @@
+import mdiCalendar from '@iconify/icons-mdi/calendar'
 import mdiHome from '@iconify/icons-mdi/home'
 import mdiMap from '@iconify/icons-mdi/map'
 import { Icon } from '@iconify/react'
@@ -10,7 +11,7 @@ import { LanguageSettings } from '../LanguageSettings'
 export const SECTIONS = [
   { title: 'intro', icon: mdiHome },
   { title: 'map', icon: mdiMap },
-  // { title: 'schedule' },
+  { title: 'schedule', icon: mdiCalendar },
   // { title: 'president-message' },
   // { title: 'admission-free' },
   // { title: 'sponsors' },
