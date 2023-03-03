@@ -16,7 +16,16 @@ export function SectionHero() {
       <img src={logo} alt="Sakura" className="w-48 h-48" />
       <h1 className="text-xs uppercase tracking-wider">Lancaster, PA</h1>
       <h1 className="text-2xl font-bold mb-4">{t('title')}</h1>
-      <Icon icon={mdiChevronDown} className="text-4xl animate-bounce" />
+      <Icon
+        icon={mdiChevronDown}
+        className="text-4xl animate-bounce"
+        onClick={() => {
+          document.getElementById('section-intro')?.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start',
+          })
+        }}
+      />
     </ScreenSection>
   )
 }

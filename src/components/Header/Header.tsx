@@ -65,13 +65,10 @@ export function NavigationBar() {
 
   useEffect(() => {
     // scroll that nav button into view
-    const element = document.getElementById('nav-' + activeSection)
-    if (element) {
-      element.scrollIntoView({
-        behavior: 'smooth',
-        block: 'center',
-      })
-    }
+    document.getElementById('nav-' + activeSection)?.scrollIntoView({
+      behavior: 'smooth',
+      block: 'center',
+    })
   }, [activeSection])
 
   return (
@@ -88,13 +85,10 @@ export function NavigationBar() {
                 : 'text-pink-700',
             )}
             onClick={() => {
-              const element = document.getElementById('section-' + el.title)
-              if (element) {
-                element.scrollIntoView({
-                  behavior: 'smooth',
-                  block: 'start',
-                })
-              }
+              document.getElementById('section-' + el.title)?.scrollIntoView({
+                behavior: 'smooth',
+                block: 'start',
+              })
             }}
           >
             {el.icon && <Icon icon={el.icon} className="mr-1 opacity-80" />}
