@@ -70,7 +70,7 @@ i18n
 
     // LanguageDetector options
     detection: {
-      order: ['localStorage', 'navigator'],
+      order: ['navigator'],
       caches: ['localStorage'],
     },
   })
