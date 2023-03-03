@@ -10,22 +10,15 @@
     "contact": "Contact",
     "faq": "FAQ"
   },
-  "features": {
-    "items": [
-      "Cotton Candy",
-      "Choco-banana",
-      "Kendama",
-      "Water yoyos",
-      "Tea",
-      "Portrait drawing",
-      "Origami",
-      "Shooting",
-      "T-shirt/Indigo sales",
-      "Your name in Japanese",
-      "Kimono wearing ",
-      "Chopsticks game",
-      "LAAPI Information"
-    ],
-    "and-more": "and more!"
+  "schedules": {
+    "opening": "Opening",
+    "mochi-making-1": "Mochi Making & Tasting 1",
+    "band-performance-1": "Band Performance 1",
+    "kyo-daiko": "Kyo Daiko (Japanese drums) Performance",
+    "bon-odori": "Bon-odori (Summer dance)",
+    "band-performance-2": "Band Performance 2",
+    "raffle-mochi-making-2": "Raffle & Mochi Making & Tasting 2",
+    "band-performance-3": "Band Performance 3",
+    "closing": "Closing"
   }
 }

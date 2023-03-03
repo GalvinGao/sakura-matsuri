@@ -3,12 +3,10 @@ import dayjs from 'dayjs'
 import { useTranslation } from 'react-i18next'
 import { ScreenSection } from '../ScreenSection/ScreenSection'
 
-export type I18nString = Record<string, string>
-
 interface ScheduleEvent {
   start: Date
   end: Date
-  title: I18nString
+  title: string
 }
 
 const sakuraDate = '2023-03-25'
@@ -28,93 +26,68 @@ const schedules: ScheduleEvent[] = [
   {
     start: toDate('13:00'),
     end: toDate('13:10'),
-    title: {
-      en: 'Opening',
-      ja: '始めのご挨拶',
-    },
+    title: 'opening',
   },
   {
     start: toDate('13:10'),
     end: toDate('13:30'),
-    title: {
-      en: 'Mochi Making & Tasting 1',
-      ja: '餅つき（１）',
-    },
+    title: 'mochi-making-1',
   },
   {
     start: toDate('13:30'),
     end: toDate('13:50'),
-    title: {
-      en: 'Band Performance 1',
-      ja: 'バンド演奏',
-    },
+    title: 'band-performance-1',
   },
   {
     start: toDate('14:00'),
     end: toDate('15:00'),
-    title: {
-      en: 'Kyo Daiko (Japanese drums) Performance',
-      ja: '協太鼓の演奏',
-    },
+    title: 'kyo-daiko',
   },
   {
     start: toDate('15:00'),
     end: toDate('15:30'),
-    title: {
-      en: 'Bon-odori (Summer dance)',
-      ja: '盆踊り（炭坑節、上野町）',
-    },
+    title: 'bon-odori',
   },
   {
     start: toDate('15:30'),
     end: toDate('16:00'),
-    title: {
-      en: 'Band Performance 2',
-      ja: 'バンド演奏',
-    },
+    title: 'band-performance-2',
   },
   {
     start: toDate('16:00'),
     end: toDate('16:20'),
-    title: {
-      en: 'Raffle & Mochi Making & Tasting 2',
-      ja: '福引と餅つき（２）',
-    },
+    title: 'raffle-mochi-making-2',
   },
   {
     start: toDate('16:20'),
     end: toDate('17:00'),
-    title: {
-      en: 'Band Performance 3',
-      ja: 'バンド演奏',
-    },
+    title: 'band-performance-3',
   },
   {
     start: toDate('17:00'),
     end: toDate('17:10'),
-    title: {
-      en: 'Closing',
-      ja: '終わりのご挨拶',
-    },
+    title: 'closing',
   },
 ]
 
 function ScheduleBlock({ event }: { event: ScheduleEvent }) {
-  const { i18n } = useTranslation()
+  const { t } = useTranslation()
   const duration = (event.end.getTime() - event.start.getTime()) / 1000 / 60
   return (
     <div
       className={clsx(
-        'flex border border-solid border-gray-50/20 h-full px-1.5 py-1 rounded-md shadow bg-primary/20',
+        'flex border border-solid border-primary/20 h-full px-2 py-1.5 rounded-md shadow bg-primary/10',
         duration <= 10
           ? 'flex-row items-center gap-2'
           : 'flex-col items-start justify-start',
       )}
     >
-      <div className="text-sm font-semibold">{event.title[i18n.language]}</div>
       <div className="text-xs">
         {dayjs(event.start).format('HH:mm')} —{' '}
         {dayjs(event.end).format('HH:mm')}
+      </div>
+      <div className="text-sm font-semibold">
+        {t('schedules.' + event.title)}
       </div>
     </div>
   )

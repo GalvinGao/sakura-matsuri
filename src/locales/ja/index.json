@@ -10,22 +10,15 @@
     "contact": "連絡先",
     "faq": "FAQ"
   },
-  "features": {
-    "items": [
-      "綿菓子",
-      "チョコバナナ",
-      "けん玉",
-      "ヨーヨー釣り",
-      "お茶",
-      "似顔絵描き",
-      "折り紙",
-      "射的ゲーム",
-      "Tシャツ、藍染販売",
-      "名前の缶バッジ作り",
-      "着物試着",
-      "箸ゲーム",
-      "LAAPI インフォメーション"
-    ],
-    "and-more": "and more!"
+  "schedules": {
+    "opening": "始めのご挨拶",
+    "mochi-making-1": "餅つき（１）",
+    "band-performance-1": "バンド演奏",
+    "kyo-daiko": "協太鼓の演奏",
+    "bon-odori": "盆踊り（炭坑節、上野町）",
+    "band-performance-2": "バンド演奏",
+    "raffle-mochi-making-2": "福引と餅つき（２）",
+    "band-performance-3": "バンド演奏",
+    "closing": "終わりのご挨拶"
   }
 }
