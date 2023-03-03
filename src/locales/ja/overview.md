@@ -1,8 +1,10 @@
-### 何時間？
+入場、参加無料！
+
+### 日時
 
 ３月２５日(土曜日) 1:00pm~5:00pm
 
-### どこで？
+### 場所
 
 Franklin & Marshall College, Hartman Green にて
 (雨天: Mayser Gym)
@@ -11,7 +13,7 @@ Franklin & Marshall College, Hartman Green にて
 
 ### ゲスト
 
-入場、参加無料!
+フィラデルフィア協太鼓
 
 OKA, YUZU レストランのギフト券が当たる福引もあります！！
 
