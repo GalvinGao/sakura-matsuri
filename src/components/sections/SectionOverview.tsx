@@ -15,8 +15,16 @@ export function SectionOverview() {
       {/* <h1 className="text-2xl font-bold pt-2 pb-4">{t('sections.overview')}</h1> */}
       <Alert
         severity="success"
-        sx={{ mb: 2 }}
-        icon={<Icon icon={mdiCurrencyUsdOff} />}
+        sx={{
+          mb: 2,
+          background: 'rgba(237, 247, 237, 0.3)',
+          border: '1px solid rgb(237, 247, 237)',
+          '& .MuiAlert-icon': {
+            color: 'rgba(74, 222, 128)',
+          },
+        }}
+        className="text-green-200 font-bold"
+        icon={<Icon icon={mdiCurrencyUsdOff} color="inherit" />}
       >
         {t('admission-free')}
       </Alert>
