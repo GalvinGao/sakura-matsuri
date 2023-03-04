@@ -23,7 +23,7 @@ export function SectionHero() {
 
       <Button
         href="/event.ics"
-        className="mb-6 bg-[rgba(255,255,255,0.3)] text-pink-700 px-4 border border-solid border-white/30"
+        className="mb-6 bg-[rgba(255,255,255,0.3)] hover:bg-[rgba(255,255,255,0.4)] active:bg-[rgba(255,255,255,0.2)] text-pink-700 px-4 border border-solid border-white/30"
         variant="text"
         color="inherit"
         startIcon={<Icon icon={mdiCalendar} />}
