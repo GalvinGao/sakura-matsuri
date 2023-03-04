@@ -13,16 +13,18 @@ export function SectionHero() {
     <ScreenSection
       id="hero"
       className="h-full"
-      contentClassName="flex flex-col items-center justify-end h-full drop-shadow-md"
+      contentClassName="flex flex-col items-center justify-end h-full"
     >
-      <img src={logo} alt="Sakura" className="w-48 h-48" />
-      <h1 className="text-xs uppercase tracking-wider">Lancaster, PA</h1>
-      <h1 className="text-2xl font-bold mb-4">{t('title')}</h1>
+      <img src={logo} alt="Sakura" className="w-48 h-48 drop-shadow-md" />
+      <h1 className="text-xs uppercase tracking-wider drop-shadow-md">
+        Lancaster, PA
+      </h1>
+      <h1 className="text-2xl font-bold mb-4 drop-shadow-md">{t('title')}</h1>
 
       <Button
         href="/event.ics"
-        className="mb-6 bg-[#be4a69] text-primary"
-        variant="contained"
+        className="mb-6 bg-[rgba(255,255,255,0.3)] text-pink-700 px-4 border border-solid border-white/30"
+        variant="text"
         color="inherit"
         startIcon={<Icon icon={mdiCalendar} />}
       >
@@ -32,7 +34,7 @@ export function SectionHero() {
       <span>{t('swipe-to-learn-more')}</span>
       <Icon
         icon={mdiChevronDown}
-        className="text-4xl animate-bounce cursor-pointer"
+        className="text-4xl animate-bounce cursor-pointer drop-shadow-md"
         onClick={() => {
           document.getElementById('section-overview')?.scrollIntoView({
             behavior: 'smooth',
