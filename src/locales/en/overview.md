@@ -11,7 +11,6 @@ Parking: Williamson Parking Lot or College Ave public parking
 ### Guests
 
 Guest Performers: Kyo Daiko (Japanese drums)
-Admission free!
 
 Door Prizes including gift certificates from Oka & Yuzu restaurants
 
