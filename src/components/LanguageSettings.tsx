@@ -15,6 +15,11 @@ const LANGUAGE_OPTIONS = [
   },
 ]
 
+const getLanguageCode = (lang: string) => {
+  const langCode = lang.split('-')?.[0]
+  return LANGUAGE_OPTIONS.find(option => option.id === langCode)?.id ?? 'en'
+}
+
 export const LanguageSettings = () => {
   const [anchorEl, setAnchorEl] = useState<null | HTMLElement>(null)
   const open = Boolean(anchorEl)
@@ -55,7 +60,7 @@ export const LanguageSettings = () => {
               i18n.changeLanguage(lang.id)
               handleClose()
             }}
-            selected={lang.id === activeLanguage?.id}
+            selected={lang.id === getLanguageCode(i18n.language)}
           >
             {lang.name}
           </MenuItem>
