@@ -89,14 +89,7 @@ function ScheduleBlock({ event }: { event: ScheduleEvent }) {
         {dayjs(event.start).format('HH:mm')} —{' '}
         {dayjs(event.end).format('HH:mm')}
       </div>
-      <div
-        className={clsx(
-          'text-sm font-semibold leading-[1.18]',
-          shortEvent
-            ? 'text-ellipsis overflow-hidden whitespace-nowrap'
-            : undefined,
-        )}
-      >
+      <div className={clsx('text-sm font-semibold leading-[1.18]')}>
         {titleLines.length === 1
           ? titleLines[0]
           : titleLines.map((line, i) => (
