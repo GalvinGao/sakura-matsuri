@@ -34,32 +34,32 @@ const schedules: ScheduleEvent[] = [
     title: 'mochi-making-1',
   },
   {
-    start: toDate('13:30'),
-    end: toDate('13:50'),
+    start: toDate('13:35'),
+    end: toDate('14:05'),
     title: 'band-performance-1',
   },
   {
-    start: toDate('14:00'),
-    end: toDate('15:00'),
+    start: toDate('14:15'),
+    end: toDate('15:15'),
     title: 'kyo-daiko',
   },
   {
-    start: toDate('15:00'),
-    end: toDate('15:30'),
+    start: toDate('15:15'),
+    end: toDate('15:40'),
     title: 'bon-odori',
   },
   {
-    start: toDate('15:30'),
-    end: toDate('16:00'),
+    start: toDate('15:45'),
+    end: toDate('16:15'),
     title: 'band-performance-2',
   },
   {
-    start: toDate('16:00'),
-    end: toDate('16:20'),
+    start: toDate('16:20'),
+    end: toDate('16:40'),
     title: 'raffle-mochi-making-2',
   },
   {
-    start: toDate('16:20'),
+    start: toDate('16:45'),
     end: toDate('17:00'),
     title: 'band-performance-3',
   },
@@ -73,21 +73,37 @@ const schedules: ScheduleEvent[] = [
 function ScheduleBlock({ event }: { event: ScheduleEvent }) {
   const { t } = useTranslation()
   const duration = (event.end.getTime() - event.start.getTime()) / 1000 / 60
+  const shortEvent = duration <= 15
+  const titleLines = t('schedules.' + event.title).split('\n')
+
   return (
     <div
       className={clsx(
         'flex border border-solid border-primary/20 h-full px-2 py-1.5 rounded-md shadow bg-primary/10',
-        duration <= 10
+        shortEvent
           ? 'flex-row items-center gap-2'
-          : 'flex-col items-start justify-start',
+          : 'flex-col items-start justify-start gap-[2px]',
       )}
     >
-      <div className="text-xs">
+      <div className="text-xs whitespace-nowrap">
         {dayjs(event.start).format('HH:mm')} —{' '}
         {dayjs(event.end).format('HH:mm')}
       </div>
-      <div className="text-sm font-semibold">
-        {t('schedules.' + event.title)}
+      <div
+        className={clsx(
+          'text-sm font-semibold leading-[1.18]',
+          shortEvent
+            ? 'text-ellipsis overflow-hidden whitespace-nowrap'
+            : undefined,
+        )}
+      >
+        {titleLines.length === 1
+          ? titleLines[0]
+          : titleLines.map((line, i) => (
+              <div className="mb-[2px] last:mb-0" key={i}>
+                {line}
+              </div>
+            ))}
       </div>
     </div>
   )
@@ -98,35 +114,48 @@ function ScheduleRender({ events }: { events: ScheduleEvent[] }) {
   const lastEventAtHour = events[events.length - 1].end.getHours() + 1
   // we assume that the event is in the same day
 
-  const blockHeight = 24 * 6.5
+  const blockHeight = window.innerHeight / 5
 
   return (
     <div className="relative w-full h-full">
       <div className="flex flex-col items-center justify-start">
-        {Array.from({ length: lastEventAtHour - firstEventAtHour }).map(
-          (_, i) => (
-            <div
-              key={i}
-              className="flex items-start justify-start text-xs opacity-50 border-t border-solid border-gray-100/20 w-full pt-2"
-              style={{
-                height: `${blockHeight}px`,
-              }}
-            >
-              {firstEventAtHour + i}:00
-            </div>
-          ),
-        )}
+        {Array.from({
+          length: (lastEventAtHour - firstEventAtHour) * 2 - 1,
+        }).map((_, i) => (
+          <div
+            key={i}
+            className={clsx(
+              'flex items-start justify-start text-xs text-gray-100/50 border-t-[thin] border-solid pt-1 pl-1',
+              i % 2 !== 0
+                ? 'ml-[3rem] w-[calc(100%-3rem)] border-gray-100/10'
+                : 'w-full border-gray-100/20',
+            )}
+            style={{
+              height: `${blockHeight / 2}px`,
+            }}
+          >
+            {i % 2 === 0 && `${Math.floor(firstEventAtHour + i / 2)}:00`}
+          </div>
+        ))}
       </div>
       {events.map((event, i) => {
-        const topOffsetMinutes =
-          event.start.getHours() * 60 +
-          event.start.getMinutes() -
-          firstEventAtHour * 60
-        const topOffsetPixels = (topOffsetMinutes / 60) * blockHeight
+        const topOffsetHours =
+          (event.start.getHours() * 60 +
+            event.start.getMinutes() -
+            firstEventAtHour * 60) /
+          60
+        const topOffsetPixels = topOffsetHours * blockHeight
 
         const heightOffsetHours =
           (event.end.getTime() - event.start.getTime()) / 1000 / 60 / 60
         const heightOffsetPixels = heightOffsetHours * blockHeight
+
+        console.log('event', i, event, {
+          topOffsetHours,
+          topOffsetPixels,
+          heightOffsetHours,
+          heightOffsetPixels,
+        })
 
         return (
           <div
