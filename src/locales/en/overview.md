@@ -4,7 +4,7 @@ March 25 (Sat) 1:00pm ~ 5:00pm
 
 ### Where
 
-Hartman Green, Franklin & Marshall College (Rain: Mayser Gym)
+Mayser Gym, Franklin & Marshall College
 
 Parking: Williamson Parking Lot or College Ave public parking
 

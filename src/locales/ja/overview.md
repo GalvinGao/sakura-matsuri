@@ -4,7 +4,7 @@
 
 ### 場所
 
-Franklin & Marshall College, Hartman Green にて (雨天: Mayser Gym)
+Franklin & Marshall College, Mayser Gym にて
 
 駐車: Williamson Parking Lot または College Ave （路上駐車）をご利用ください。また、大学の他の駐車場に駐車していただいても結構です。
 

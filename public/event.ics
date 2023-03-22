@@ -28,7 +28,7 @@ DTSTART;TZID=America/New_York:20230325T130000
 DTEND;TZID=America/New_York:20230325T170000
 SUMMARY:Sakura Festival / 桜祭り
 URL:https://sakura2023.fandm.edu
-LOCATION:Hartman Green\, Franklin and Marshall College
+LOCATION:Mayser Gym\, Franklin and Marshall College
 BEGIN:VALARM
 ACTION:DISPLAY
 DESCRIPTION:Sakura Festival / 桜祭り
