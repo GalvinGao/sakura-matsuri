@@ -1,7 +1,8 @@
+import mdiAlertCircle from '@iconify/icons-mdi/alert-circle'
 import mdiCalendar from '@iconify/icons-mdi/calendar'
 import mdiChevronDown from '@iconify/icons-mdi/chevron-down'
 import { Icon } from '@iconify/react'
-import { Button } from '@mui/material'
+import { Alert, Button } from '@mui/material'
 import { useTranslation } from 'react-i18next'
 import logo from '../../assets/logo.png?url'
 import { ScreenSection } from '../ScreenSection/ScreenSection'
@@ -20,6 +21,21 @@ export function SectionHero() {
         Lancaster, PA
       </h1>
       <h1 className="text-2xl font-bold mb-4 drop-shadow-md">{t('title')}</h1>
+
+      <Alert
+        sx={{
+          mb: 2,
+          background:
+            'repeating-linear-gradient(-45deg, rgba(237, 247, 237, 0.3), rgba(237, 247, 237, 0.3) 10px, rgba(237, 247, 237, 0.1) 10px, rgba(237, 247, 237, 0.1) 20px)',
+          '& .MuiAlert-icon': {
+            color: 'rgba(174, 45, 93, 0.8)',
+          },
+        }}
+        className="font-bold w-full text-pink-700"
+        icon={<Icon icon={mdiAlertCircle} color="inherit" />}
+      >
+        {t('alert-location-change')}
+      </Alert>
 
       <Button
         href="/event.ics"
