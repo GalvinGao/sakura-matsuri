@@ -35,22 +35,22 @@ const schedules: ScheduleEvent[] = [
   },
   {
     start: toDate('13:35'),
-    end: toDate('14:05'),
+    end: toDate('13:55'),
     title: 'band-performance-1',
   },
   {
-    start: toDate('14:15'),
-    end: toDate('15:15'),
+    start: toDate('14:05'),
+    end: toDate('15:05'),
     title: 'kyo-daiko',
   },
   {
-    start: toDate('15:15'),
-    end: toDate('15:40'),
+    start: toDate('15:05'),
+    end: toDate('15:30'),
     title: 'bon-odori',
   },
   {
-    start: toDate('15:45'),
-    end: toDate('16:15'),
+    start: toDate('15:35'),
+    end: toDate('15:55'),
     title: 'band-performance-2',
   },
   {
