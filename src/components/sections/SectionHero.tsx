@@ -26,9 +26,9 @@ export function SectionHero() {
         sx={{
           mb: 2,
           background:
-            'repeating-linear-gradient(-45deg, rgba(237, 247, 237, 0.3), rgba(237, 247, 237, 0.3) 10px, rgba(237, 247, 237, 0.1) 10px, rgba(237, 247, 237, 0.1) 20px)',
+            'repeating-linear-gradient(-45deg, rgba(237, 247, 237, 0.5), rgba(237, 247, 237, 0.5) 10px, rgba(237, 247, 237, 0.35) 10px, rgba(237, 247, 237, 0.35) 20px)',
           '& .MuiAlert-icon': {
-            color: 'rgba(174, 45, 93, 0.8)',
+            color: 'rgba(174, 45, 93, 1)',
           },
         }}
         className="font-bold w-full text-pink-700"
