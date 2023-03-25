@@ -1,6 +1,7 @@
 import { useEffect, useRef } from 'react'
 import sakuraBackground from './assets/sakura-bg.jpg?url'
 import { Header, NavigationBar } from './components/Header/Header'
+import { SectionCredits } from './components/sections/SectionCredits'
 
 import { SectionHero } from './components/sections/SectionHero'
 import { SectionIntro } from './components/sections/SectionIntro'
@@ -63,6 +64,7 @@ function App() {
         <SectionIntro />
         <SectionMap />
         <SectionSchedule />
+        <SectionCredits />
       </section>
       <NavigationBar />
     </main>
